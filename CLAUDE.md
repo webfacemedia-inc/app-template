@@ -45,6 +45,10 @@ pb.collection('items').subscribe('*', (e) => { /* e.action: create|update|delete
 - Enable OAuth providers (owner pastes the client ID in `/_/`).
 - Attach custom domains, see server logs, restart the app (owner's dashboard).
 
+## Platform control from your agent (optional)
+
+If your operator gave you an API token, you can manage the app itself (status, redeploy, domains) via MCP or REST: install with `curl -fsSL https://webface.cloud/install-mcp.sh | sh`, or call `https://webface.cloud/api/platform/*` with `Authorization: Bearer <token>`. Docs: https://webface.cloud/docs/deploy
+
 ## Verifying your work
 
 After pushing, the app redeploys in under a minute. Check the live URL. If the page is stale, the deploy may have failed — tell the human to check the app card on their dashboard for the deploy error.
